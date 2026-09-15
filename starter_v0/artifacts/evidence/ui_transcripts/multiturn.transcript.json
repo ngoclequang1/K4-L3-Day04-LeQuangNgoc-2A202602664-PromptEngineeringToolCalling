@@ -1,0 +1,192 @@
+{
+  "transcript_id": "ui_20260915T190307_d24312cb",
+  "surface": "streamlit",
+  "version": "v3",
+  "artifact_version": "v3+p88cbf71f0873+t2d2e0fe2c35f",
+  "prompt_hash": "88cbf71f0873e5757ab1cd2e13f0278ef639f90fb1ae5beae16411e79563bc99",
+  "tools_hash": "2d2e0fe2c35f9da36b7560fe8c5e181f0688db14960dbf3078caa888a2d92f9a",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "created_at": "2026-09-15T19:03:07",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "turns": [
+    {
+      "turn_index": 1,
+      "user": "Kiểm tra riêng VPN của máy LT-204.",
+      "started_at": "2026-09-15T19:03:07",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "inspect_device",
+              "args": {
+                "asset_id": "LT-204",
+                "check": "vpn"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "inspect_device",
+              "args": {
+                "asset_id": "LT-204",
+                "check": "vpn"
+              },
+              "result": {
+                "tool": "inspect_device",
+                "asset_id": "LT-204",
+                "check": "vpn",
+                "device": {
+                  "asset_id": "LT-204",
+                  "manufacturer": "Lenovo",
+                  "type": "laptop",
+                  "model": "ThinkPad T14 Gen 4",
+                  "os": "Windows 11 23H2",
+                  "assigned_to": "EMP-1001",
+                  "location": "Bangkok floor 3",
+                  "purchase_date": "2024-02-12",
+                  "warranty_until": "2027-02-11"
+                },
+                "diagnostics": {
+                  "vpn": "client 5.2.1; last connection failed with AUTH_TIMEOUT"
+                },
+                "snapshot_at": "2026-09-14T09:00:00+07:00"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "The VPN diagnostics for the device LT-204 (Lenovo ThinkPad T14 Gen 4) indicate that the last connection attempt failed with an error: **AUTH_TIMEOUT**. \n\nHere are the details:\n- **OS**: Windows 11 23H2\n- **Assigned to**: EMP-1001\n- **Location**: Bangkok floor 3\n- **Purchase Date**: February 12, 2024\n- **Warranty Until**: February 11, 2027\n\nTo resolve the AUTH_TIMEOUT issue, I recommend checking the VPN credentials or network connection settings. If the problem persists, please let me know if you would like to create a support ticket for further assistance.",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "inspect_device",
+          "args": {
+            "asset_id": "LT-204",
+            "check": "vpn"
+          },
+          "result": {
+            "tool": "inspect_device",
+            "asset_id": "LT-204",
+            "check": "vpn",
+            "device": {
+              "asset_id": "LT-204",
+              "manufacturer": "Lenovo",
+              "type": "laptop",
+              "model": "ThinkPad T14 Gen 4",
+              "os": "Windows 11 23H2",
+              "assigned_to": "EMP-1001",
+              "location": "Bangkok floor 3",
+              "purchase_date": "2024-02-12",
+              "warranty_until": "2027-02-11"
+            },
+            "diagnostics": {
+              "vpn": "client 5.2.1; last connection failed with AUTH_TIMEOUT"
+            },
+            "snapshot_at": "2026-09-14T09:00:00+07:00"
+          }
+        }
+      ],
+      "status": "answered",
+      "assistant_text": "The VPN diagnostics for the device LT-204 (Lenovo ThinkPad T14 Gen 4) indicate that the last connection attempt failed with an error: **AUTH_TIMEOUT**. \n\nHere are the details:\n- **OS**: Windows 11 23H2\n- **Assigned to**: EMP-1001\n- **Location**: Bangkok floor 3\n- **Purchase Date**: February 12, 2024\n- **Warranty Until**: February 11, 2027\n\nTo resolve the AUTH_TIMEOUT issue, I recommend checking the VPN credentials or network connection settings. If the problem persists, please let me know if you would like to create a support ticket for further assistance.",
+      "ended_at": "2026-09-15T19:03:11"
+    },
+    {
+      "turn_index": 2,
+      "user": "Mình nhầm mã máy, kiểm tra VPN trên LT-318 thay nhé.",
+      "started_at": "2026-09-15T19:03:11",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "inspect_device",
+              "args": {
+                "asset_id": "LT-318",
+                "check": "vpn"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "inspect_device",
+              "args": {
+                "asset_id": "LT-318",
+                "check": "vpn"
+              },
+              "result": {
+                "tool": "inspect_device",
+                "asset_id": "LT-318",
+                "check": "vpn",
+                "device": {
+                  "asset_id": "LT-318",
+                  "manufacturer": "Apple",
+                  "type": "laptop",
+                  "model": "MacBook Pro 14-inch M3",
+                  "os": "macOS 15.0",
+                  "assigned_to": "EMP-1005",
+                  "location": "Singapore floor 6",
+                  "purchase_date": "2024-01-18",
+                  "warranty_until": "2027-01-17"
+                },
+                "diagnostics": {
+                  "vpn": "client 5.1.8; certificate expires in 5 days"
+                },
+                "snapshot_at": "2026-09-14T09:00:00+07:00"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "The VPN diagnostics for the device LT-318 (Apple MacBook Pro 14-inch M3) show the following:\n\n- **OS**: macOS 15.0\n- **Assigned to**: EMP-1005\n- **Location**: Singapore floor 6\n- **Purchase Date**: January 18, 2024\n- **Warranty Until**: January 17, 2027\n- **VPN Client Version**: 5.1.8\n- **Certificate Status**: Expires in 5 days\n\nTo avoid any disruptions, please renew the VPN certificate before it expires. If you need assistance with this or would like to create a support ticket, let me know!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "inspect_device",
+          "args": {
+            "asset_id": "LT-318",
+            "check": "vpn"
+          },
+          "result": {
+            "tool": "inspect_device",
+            "asset_id": "LT-318",
+            "check": "vpn",
+            "device": {
+              "asset_id": "LT-318",
+              "manufacturer": "Apple",
+              "type": "laptop",
+              "model": "MacBook Pro 14-inch M3",
+              "os": "macOS 15.0",
+              "assigned_to": "EMP-1005",
+              "location": "Singapore floor 6",
+              "purchase_date": "2024-01-18",
+              "warranty_until": "2027-01-17"
+            },
+            "diagnostics": {
+              "vpn": "client 5.1.8; certificate expires in 5 days"
+            },
+            "snapshot_at": "2026-09-14T09:00:00+07:00"
+          }
+        }
+      ],
+      "status": "answered",
+      "assistant_text": "The VPN diagnostics for the device LT-318 (Apple MacBook Pro 14-inch M3) show the following:\n\n- **OS**: macOS 15.0\n- **Assigned to**: EMP-1005\n- **Location**: Singapore floor 6\n- **Purchase Date**: January 18, 2024\n- **Warranty Until**: January 17, 2027\n- **VPN Client Version**: 5.1.8\n- **Certificate Status**: Expires in 5 days\n\nTo avoid any disruptions, please renew the VPN certificate before it expires. If you need assistance with this or would like to create a support ticket, let me know!",
+      "ended_at": "2026-09-15T19:03:14"
+    }
+  ],
+  "capture_mode": "live model through UI session; no browser; isolated ticket folder; tool HTTP blocked",
+  "scenario": "multiturn",
+  "updated_at": "2026-09-15T19:03:14"
+}

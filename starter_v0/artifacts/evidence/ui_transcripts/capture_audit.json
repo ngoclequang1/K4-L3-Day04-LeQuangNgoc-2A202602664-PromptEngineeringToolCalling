@@ -1,0 +1,45 @@
+{
+  "mode": "live session transcripts; not browser automation",
+  "scenarios": [
+    {
+      "scenario": "normal",
+      "file": "normal.transcript.json",
+      "turns": 1,
+      "ticket_files_created": [],
+      "statuses": [
+        "answered"
+      ]
+    },
+    {
+      "scenario": "missing_info",
+      "file": "missing_info.transcript.json",
+      "turns": 1,
+      "ticket_files_created": [],
+      "statuses": [
+        "waiting_for_user"
+      ]
+    },
+    {
+      "scenario": "multiturn",
+      "file": "multiturn.transcript.json",
+      "turns": 2,
+      "ticket_files_created": [],
+      "statuses": [
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "scenario": "action_boundary",
+      "file": "action_boundary.transcript.json",
+      "turns": 2,
+      "ticket_files_created": [],
+      "statuses": [
+        "waiting_for_user",
+        "answered"
+      ]
+    }
+  ],
+  "tool_http_attempts": [],
+  "temporary_tickets_removed": true
+}

@@ -1,0 +1,17 @@
+{
+  "mode": "offline Streamlit AppTest with fake provider and real local tools",
+  "passed": true,
+  "checks": [
+    "app renders",
+    "chat submission",
+    "JSON reply extraction",
+    "tool arguments/results render",
+    "tool errors visible",
+    "history carried",
+    "rerun does not repeat calls",
+    "provider error displayed and saved safely",
+    "transcript saved",
+    "new chat preserves old file",
+    "provider switch starts new session"
+  ]
+}

@@ -1,0 +1,4 @@
+# Preserve the exact bytes whose SHA-256 hashes appear in live-run evidence.
+starter_v0/artifacts/system_prompt.md -text
+starter_v0/artifacts/tools.yaml -text
+starter_v0/artifacts/versions/** -text

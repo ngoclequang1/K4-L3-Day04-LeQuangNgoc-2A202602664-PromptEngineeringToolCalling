@@ -1,6 +1,6 @@
 # Day 04 Lab Checklist — IT Helpdesk Agent
 
-Based on `README.md` (official requirements) and `LAB-GUIDE.md` (recommended workflow). Steps 2–3 and the Step 4 review have saved evidence. Failed safety guarantees remain unchecked and are explained below. Paths below are relative to `starter_v0/` unless stated otherwise.
+Based on `README.md` (official requirements) and `LAB-GUIDE.md` (recommended workflow). Steps 2–3, the Step 4 review, Step 5, and technical report/submission preparation have saved evidence. Personal reflection and final submission actions are pending. Failed safety guarantees remain unchecked. Paths below are relative to `starter_v0/` unless stated otherwise.
 
 ## 1. Understand and prepare — recommended
 
@@ -58,21 +58,25 @@ Additional coverage: run `data/eval_helpdesk_extension.json` (10 cases) to check
 
 ## 5. UI and transcripts — core
 
-- [ ] Provide a working chat UI.
-- [ ] Display tool names, arguments, results/errors, and the artifact version.
-- [ ] Save transcripts demonstrating normal requests, missing information, multi-turn context, and action-confirmation boundaries.
-- [ ] Recommended: reuse `run_model_tool_loop` and display final responses, round/status, artifact hashes, and transcript paths.
+- [x] Provide a working chat UI.
+- [x] Display tool names, arguments, results/errors, and the artifact version.
+- [x] Save transcripts demonstrating normal requests, missing information, multi-turn context, and action-confirmation boundaries.
+- [x] Recommended: reuse `run_model_tool_loop` and display final responses, round/status, artifact hashes, and transcript paths.
+
+Simple Streamlit UI: [usage guide](starter_v0/UI-GUIDE.md). Four live demo transcripts (six user turns) are saved under `artifacts/evidence/ui_transcripts/`; offline UI interaction checks passed. Step 4 safety failures remain unchanged.
 
 ## 6. Report and submission — core
 
-- [ ] Complete `artifacts/REPORT.md`: agent description, version evidence, failures, safety review, and reflection.
-- [ ] Link concrete run/transcript files to support report claims.
-- [ ] Verify recorded artifact hashes correspond to the artifacts used in each experiment.
-- [ ] Confirm all required artifacts, version logs, base runs, team cases, adversarial evidence, transcripts, and UI are included.
-- [ ] Exclude `.env`, API keys, `.venv`, caches, generated tickets, and real data from submission.
-- [ ] Read the root `SUBMISSION-GUIDE.md` for packaging and submission instructions; this checklist covers only the README and lab guide.
-- [ ] Recommended: rehearse 3–5 demo scenarios explaining the baseline failure, hypothesis, change, outcome, and remaining limitations.
-- [ ] Recommended: prepare saved runs/transcripts as a fallback for provider or network failures.
+- [x] Complete the technical content of `artifacts/REPORT.md`: agent description, version evidence, failures, safety review, and evidence-based technical reflection. Learner-authored personal reflection in C2 remains pending.
+- [x] Link concrete run/transcript files to support report claims.
+- [x] Verify recorded artifact hashes correspond to the artifacts used in each experiment.
+- [x] Confirm all required artifacts, version logs, base runs, team cases, adversarial evidence, transcripts, and UI are included in the local review archive.
+- [x] Exclude `.env`, API keys, `.venv`, caches, generated tickets, and real operational data from the archive; preserve clearly labeled synthetic attack fixtures and required student identity metadata.
+- [x] Read the root `SUBMISSION-GUIDE.md` and prepare the shared-repository submission handoff.
+- [x] Prepare and execute four demo scenarios with linked traces and a baseline/change/limitation explanation; learner presentation rehearsal is not claimed.
+- [x] Prepare saved runs/transcripts as a fallback for provider or network failures.
+
+Prepared: [technical report](starter_v0/artifacts/REPORT.md), [roster](TEAMMATES.md), [submission handoff](SUBMISSION-READY.md), and [validation/file manifest](starter_v0/artifacts/evidence/submission_audit.json). The local review ZIP is in `submission/` and is intentionally ignored by Git. Remaining: write your own C2 reflection, personally commit/push final work, verify the final GitHub tree, and submit the shared URL on VLearn. This checklist does not claim those actions have happened.
 
 ## 7. New tool — optional bonus
 

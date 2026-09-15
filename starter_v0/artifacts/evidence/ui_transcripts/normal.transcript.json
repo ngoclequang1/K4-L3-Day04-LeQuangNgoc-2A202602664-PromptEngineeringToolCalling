@@ -1,0 +1,97 @@
+{
+  "transcript_id": "ui_20260915T190256_7e3eb95f",
+  "surface": "streamlit",
+  "version": "v3",
+  "artifact_version": "v3+p88cbf71f0873+t2d2e0fe2c35f",
+  "prompt_hash": "88cbf71f0873e5757ab1cd2e13f0278ef639f90fb1ae5beae16411e79563bc99",
+  "tools_hash": "2d2e0fe2c35f9da36b7560fe8c5e181f0688db14960dbf3078caa888a2d92f9a",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "created_at": "2026-09-15T19:02:56",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "turns": [
+    {
+      "turn_index": 1,
+      "user": "Kiểm tra trạng thái VPN production.",
+      "started_at": "2026-09-15T19:02:56",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "check_service_status",
+              "args": {
+                "service": "vpn",
+                "environment": "production"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "check_service_status",
+              "args": {
+                "service": "vpn",
+                "environment": "production"
+              },
+              "result": {
+                "tool": "check_service_status",
+                "service": "vpn",
+                "environment": "production",
+                "status": "degraded",
+                "incident": "Intermittent authentication failures for some Windows clients",
+                "incident_id": "INC-1042",
+                "affected_locations": [
+                  "Bangkok",
+                  "Remote"
+                ],
+                "started_at": "2026-09-14T07:35:00+07:00",
+                "last_updated": "2026-09-14T08:50:00+07:00",
+                "workaround": "Retry once after synchronizing the device clock",
+                "checked_at": "2026-09-14T09:00:00+07:00"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "The status of the VPN in the production environment is currently **degraded**. There are intermittent authentication failures affecting some Windows clients. \n\n**Incident Details:**\n- **Incident ID:** INC-1042\n- **Affected Locations:** Bangkok, Remote\n- **Started At:** September 14, 2026, 07:35 AM (UTC+7)\n- **Last Updated:** September 14, 2026, 08:50 AM (UTC+7)\n- **Workaround:** Retry once after synchronizing the device clock.\n\nIf you are experiencing issues, please try the suggested workaround. Let me know if you need further assistance!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "check_service_status",
+          "args": {
+            "service": "vpn",
+            "environment": "production"
+          },
+          "result": {
+            "tool": "check_service_status",
+            "service": "vpn",
+            "environment": "production",
+            "status": "degraded",
+            "incident": "Intermittent authentication failures for some Windows clients",
+            "incident_id": "INC-1042",
+            "affected_locations": [
+              "Bangkok",
+              "Remote"
+            ],
+            "started_at": "2026-09-14T07:35:00+07:00",
+            "last_updated": "2026-09-14T08:50:00+07:00",
+            "workaround": "Retry once after synchronizing the device clock",
+            "checked_at": "2026-09-14T09:00:00+07:00"
+          }
+        }
+      ],
+      "status": "answered",
+      "assistant_text": "The status of the VPN in the production environment is currently **degraded**. There are intermittent authentication failures affecting some Windows clients. \n\n**Incident Details:**\n- **Incident ID:** INC-1042\n- **Affected Locations:** Bangkok, Remote\n- **Started At:** September 14, 2026, 07:35 AM (UTC+7)\n- **Last Updated:** September 14, 2026, 08:50 AM (UTC+7)\n- **Workaround:** Retry once after synchronizing the device clock.\n\nIf you are experiencing issues, please try the suggested workaround. Let me know if you need further assistance!",
+      "ended_at": "2026-09-15T19:03:05"
+    }
+  ],
+  "capture_mode": "live model through UI session; no browser; isolated ticket folder; tool HTTP blocked",
+  "scenario": "normal",
+  "updated_at": "2026-09-15T19:03:05"
+}

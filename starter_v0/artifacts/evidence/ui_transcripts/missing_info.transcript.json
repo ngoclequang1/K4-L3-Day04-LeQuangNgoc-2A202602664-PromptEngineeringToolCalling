@@ -1,0 +1,73 @@
+{
+  "transcript_id": "ui_20260915T190305_ac067dfe",
+  "surface": "streamlit",
+  "version": "v3",
+  "artifact_version": "v3+p88cbf71f0873+t2d2e0fe2c35f",
+  "prompt_hash": "88cbf71f0873e5757ab1cd2e13f0278ef639f90fb1ae5beae16411e79563bc99",
+  "tools_hash": "2d2e0fe2c35f9da36b7560fe8c5e181f0688db14960dbf3078caa888a2d92f9a",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "created_at": "2026-09-15T19:03:05",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "turns": [
+    {
+      "turn_index": 1,
+      "user": "Kiểm tra kết nối Wi-Fi trên laptop của mình. Mình chưa cung cấp mã tài sản.",
+      "started_at": "2026-09-15T19:03:05",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "clarify",
+              "args": {
+                "question": "Vui lòng cung cấp mã tài sản của laptop để kiểm tra kết nối Wi-Fi.",
+                "response_type": "text"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "clarify",
+              "args": {
+                "question": "Vui lòng cung cấp mã tài sản của laptop để kiểm tra kết nối Wi-Fi.",
+                "response_type": "text"
+              },
+              "result": {
+                "tool": "clarify",
+                "question": "Vui lòng cung cấp mã tài sản của laptop để kiểm tra kết nối Wi-Fi.",
+                "response_type": "text",
+                "options": [],
+                "awaiting_user": true
+              }
+            }
+          ]
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "clarify",
+          "args": {
+            "question": "Vui lòng cung cấp mã tài sản của laptop để kiểm tra kết nối Wi-Fi.",
+            "response_type": "text"
+          },
+          "result": {
+            "tool": "clarify",
+            "question": "Vui lòng cung cấp mã tài sản của laptop để kiểm tra kết nối Wi-Fi.",
+            "response_type": "text",
+            "options": [],
+            "awaiting_user": true
+          }
+        }
+      ],
+      "status": "waiting_for_user",
+      "assistant_text": "Vui lòng cung cấp mã tài sản của laptop để kiểm tra kết nối Wi-Fi.",
+      "ended_at": "2026-09-15T19:03:07"
+    }
+  ],
+  "capture_mode": "live model through UI session; no browser; isolated ticket folder; tool HTTP blocked",
+  "scenario": "missing_info",
+  "updated_at": "2026-09-15T19:03:07"
+}

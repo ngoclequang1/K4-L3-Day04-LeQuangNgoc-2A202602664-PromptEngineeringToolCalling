@@ -1,0 +1,694 @@
+{
+  "generated_at": "2026-09-15T13:31:14.574713+00:00",
+  "scope": "working-tree review archive, not a published repository or VLearn submission",
+  "technical_checks": "passed",
+  "base_runs": [
+    {
+      "version": "v0",
+      "passed": 21,
+      "measured": 30,
+      "hashes_match": true
+    },
+    {
+      "version": "v1",
+      "passed": 23,
+      "measured": 30,
+      "hashes_match": true
+    },
+    {
+      "version": "v2",
+      "passed": 27,
+      "measured": 30,
+      "hashes_match": true
+    },
+    {
+      "version": "v3",
+      "passed": 29,
+      "measured": 30,
+      "hashes_match": true
+    }
+  ],
+  "ui_transcripts": 4,
+  "relative_links_checked": 67,
+  "credential_scan": "configured key exact matches and common token/private-key patterns: no matches",
+  "synthetic_attack_data": "Preserved the fixed lab password-like attack and clearly synthetic offline probes; these are not live credentials.",
+  "real_data_scope": "Fictional lab fixture data retained; student roster is required submission identity metadata.",
+  "excluded": [
+    ".git",
+    ".env and local keys",
+    ".venv",
+    "caches",
+    "generated ticket files",
+    "scratch runs/transcripts",
+    "previous archives"
+  ],
+  "remaining": [
+    "learner-authored self-reflection",
+    "final personal commit and push",
+    "GitHub final-tree review",
+    "VLearn submission"
+  ],
+  "manifest_excludes_itself": true,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 198,
+      "sha256": "3054e4d4fba75e9fa9820adcad5bfb0d4300ef9e0df292ed74503744fc3b83a6"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 545,
+      "sha256": "beb4a252363d40006b69cfffb9916ac5fb826d61f82245a6da97cd0421165bc1"
+    },
+    {
+      "path": "CHECKLIST.md",
+      "bytes": 9099,
+      "sha256": "abe401fe6e72daebbd034eb13efd5d8040848bbd5987f8fa310cd76899c15a91"
+    },
+    {
+      "path": "LAB-GUIDE.md",
+      "bytes": 7638,
+      "sha256": "5cf3ec8829d068a6c325d665b3f17202b779f2c0889a86151efa79d59bf8d43e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8201,
+      "sha256": "09a2d5d41e0f0719c54e8260bd861a8f5f17ca0c2c6efd347fce867088a3897a"
+    },
+    {
+      "path": "SUBMISSION-GUIDE.md",
+      "bytes": 7051,
+      "sha256": "5998292804f322e7630fb7f5f54b7dc2e030b6bdc730a6e88020d255a032064c"
+    },
+    {
+      "path": "SUBMISSION-READY.md",
+      "bytes": 4190,
+      "sha256": "5473db9dc70958d77ce5ff26baf6bdcb190fd92abc405685bbdb3edaa143e966"
+    },
+    {
+      "path": "TEAMMATES.md",
+      "bytes": 973,
+      "sha256": "06ec5457575327a899d87c02ac8851a00d20a3db4c0aeb91775bde306c2fc079"
+    },
+    {
+      "path": "TOOL-SETUP.md",
+      "bytes": 9190,
+      "sha256": "ff2660805fea8f4fad9195a898149a7b3f3d92e31ef593ae1403e23dd2b2b98c"
+    },
+    {
+      "path": "starter_v0/.env.example",
+      "bytes": 487,
+      "sha256": "d4c37363d6d9a375c0418096b3809cbdceac9d4045420c0c87631a58bdfdc4d3"
+    },
+    {
+      "path": "starter_v0/.gitignore",
+      "bytes": 115,
+      "sha256": "61d22288ce963c369c6da1b3e4caf16ae4eb81a3883cf9523291695c281cb4f6"
+    },
+    {
+      "path": "starter_v0/UI-GUIDE.md",
+      "bytes": 4406,
+      "sha256": "6fa219dd76b9d568e42e7e6e23279dc5b6a42ff32307e757801b04a8d6c7560f"
+    },
+    {
+      "path": "starter_v0/agent.py",
+      "bytes": 1814,
+      "sha256": "12797818bb9879cfe51d0fb8d2f0aa3f276d092b18c887059088e90ac7f9159f"
+    },
+    {
+      "path": "starter_v0/app.py",
+      "bytes": 3488,
+      "sha256": "bb14e0de23a6152761720eb99fa987035d841e1262a4950a09a355029b8df1f4"
+    },
+    {
+      "path": "starter_v0/artifacts/BASELINE-IMPROVEMENTS.md",
+      "bytes": 8961,
+      "sha256": "f928eefad371c162f0597e64e21d249868dd57624244390297ee2486d7f931f0"
+    },
+    {
+      "path": "starter_v0/artifacts/CORE-RUN-EVIDENCE.md",
+      "bytes": 25229,
+      "sha256": "bab045e56abe4cebc9b441c6cbb8444de48f8d4bf875e7c994cb78d2205de63a"
+    },
+    {
+      "path": "starter_v0/artifacts/REPORT.md",
+      "bytes": 20706,
+      "sha256": "fbbe7f7cd59d9b87e4a339608687e064681a19d80c5a13d539e566502a4b6fd7"
+    },
+    {
+      "path": "starter_v0/artifacts/TEAM-SAFETY-EVIDENCE.md",
+      "bytes": 13197,
+      "sha256": "f7199558528cd5bc03c6ca78173f5975279047a034c47f095f47fec6a1ad66fa"
+    },
+    {
+      "path": "starter_v0/artifacts/evidence/retrieval_loop_review.json",
+      "bytes": 22604,
+      "sha256": "1692ddf146b0374c73458bdb996207b0c195939a3969bda38842065df5f4ca9a"
+    },
+    {
+      "path": "starter_v0/artifacts/evidence/security_boundary_probes.json",
+      "bytes": 14501,
+      "sha256": "0eef778a8a3fe9ad2440077b17f9d7eb733920a3c39d4331609a8aed2545c800"
+    },
+    {
+      "path": "starter_v0/artifacts/evidence/step34_validation.json",
+      "bytes": 2739,
+      "sha256": "02eb97447e5d228f9dc418b8dd1f49445a6ac6a9b4b4a39907c229a1836bc38a"
+    },
+    {
+      "path": "starter_v0/artifacts/evidence/ui_checks.json",
+      "bytes": 476,
+      "sha256": "759fa65d5a9bce7ddc6b2f39a0ea30b102429a5a71eee8251c1554ce17e0fb64"
+    },
+    {
+      "path": "starter_v0/artifacts/evidence/ui_transcripts/action_boundary.transcript.json",
+      "bytes": 3786,
+      "sha256": "b954345a12b1716670b3f9701576336d4974e48afca836e44f1575c06ad3092d"
+    },
+    {
+      "path": "starter_v0/artifacts/evidence/ui_transcripts/capture_audit.json",
+      "bytes": 1006,
+      "sha256": "5004d7ebe6da067cb51c10d3bc8e8c87d7f7cc2f2bab789a25ca4f86f4c941bf"
+    },
+    {
+      "path": "starter_v0/artifacts/evidence/ui_transcripts/missing_info.transcript.json",
+      "bytes": 2648,
+      "sha256": "29ef0f887493d6966268f073e11a141c5cad5b4229902bff6b539a6e1323f449"
+    },
+    {
+      "path": "starter_v0/artifacts/evidence/ui_transcripts/multiturn.transcript.json",
+      "bytes": 8202,
+      "sha256": "c77b2e79e0bc8de17d56116230232973ed0e163809a84a55a3287d8f67b8bd3b"
+    },
+    {
+      "path": "starter_v0/artifacts/evidence/ui_transcripts/normal.transcript.json",
+      "bytes": 4356,
+      "sha256": "9345e5ff09f12a5a7d61603137ad71797b558b773e842530f2e2170d0ea6ac33"
+    },
+    {
+      "path": "starter_v0/artifacts/evidence/v0_B_base_openrouter_20260915T182614315954.json",
+      "bytes": 74505,
+      "sha256": "e0a1988f774afd041b11d179a796838c3ef33e1dbdb51c17a54ca9a8aa91973c"
+    },
+    {
+      "path": "starter_v0/artifacts/evidence/v1_B_base_openrouter_20260915T182736789483.json",
+      "bytes": 73802,
+      "sha256": "b05071a262240ce89d8a12142d8674fcbdc5d3eff7845bb3f7e7256686a5ebc2"
+    },
+    {
+      "path": "starter_v0/artifacts/evidence/v2_B_base_openrouter_20260915T183422429231.json",
+      "bytes": 73997,
+      "sha256": "e8eca6dd0916aaf1d148e70f96b9b7eec0f0ac15ba64b5439b00af287f3c8056"
+    },
+    {
+      "path": "starter_v0/artifacts/evidence/v3_B_adversarial_openrouter_20260915T184848834858.audit.json",
+      "bytes": 1012,
+      "sha256": "b55cf8b925443650fd14ecf6ad5b3a42e66d8bdad7357b47d6fd3322562d6ebc"
+    },
+    {
+      "path": "starter_v0/artifacts/evidence/v3_B_adversarial_openrouter_20260915T184848834858.json",
+      "bytes": 26732,
+      "sha256": "cbff9136eab1f695b7b67ce9552536c7bdc8e4196e6edb68db4dbd7ece21bd88"
+    },
+    {
+      "path": "starter_v0/artifacts/evidence/v3_B_base_openrouter_20260915T183622303623.json",
+      "bytes": 72884,
+      "sha256": "b1a6fc4caa356ab8f97f170a782e4af87df2873fc4b9843ee8f41f6a516df59c"
+    },
+    {
+      "path": "starter_v0/artifacts/evidence/v3_B_group_openrouter_20260915T184619262330.audit.json",
+      "bytes": 447,
+      "sha256": "6b0549780219e89356bfc550cd195e0f165112d2d5962df444fafc2c77e33e09"
+    },
+    {
+      "path": "starter_v0/artifacts/evidence/v3_B_group_openrouter_20260915T184619262330.json",
+      "bytes": 32161,
+      "sha256": "68cf86c73f8451a410dd2e62eb9ccde66294c20ee9ab17d519906a5367c9c4b9"
+    },
+    {
+      "path": "starter_v0/artifacts/system_prompt.md",
+      "bytes": 2011,
+      "sha256": "88cbf71f0873e5757ab1cd2e13f0278ef639f90fb1ae5beae16411e79563bc99"
+    },
+    {
+      "path": "starter_v0/artifacts/tools.yaml",
+      "bytes": 7686,
+      "sha256": "2d2e0fe2c35f9da36b7560fe8c5e181f0688db14960dbf3078caa888a2d92f9a"
+    },
+    {
+      "path": "starter_v0/artifacts/version_log.csv",
+      "bytes": 1984,
+      "sha256": "f399f6c9cdd1592f2e663db61b144d948cc1658aa36b9f6acea65ea7a889507e"
+    },
+    {
+      "path": "starter_v0/artifacts/versions/v0/system_prompt.md",
+      "bytes": 804,
+      "sha256": "233ec2cecfdfd80b3879531dfe64e2c1903f39fe0facc08f9bed6fcc064b33f5"
+    },
+    {
+      "path": "starter_v0/artifacts/versions/v0/tools.yaml",
+      "bytes": 5160,
+      "sha256": "eb3e2243f23747297c1204e5e56f852f5e869f00cb97baae7786baefcabbc419"
+    },
+    {
+      "path": "starter_v0/artifacts/versions/v1/system_prompt.md",
+      "bytes": 2011,
+      "sha256": "88cbf71f0873e5757ab1cd2e13f0278ef639f90fb1ae5beae16411e79563bc99"
+    },
+    {
+      "path": "starter_v0/artifacts/versions/v1/tools.yaml",
+      "bytes": 5160,
+      "sha256": "eb3e2243f23747297c1204e5e56f852f5e869f00cb97baae7786baefcabbc419"
+    },
+    {
+      "path": "starter_v0/artifacts/versions/v2/system_prompt.md",
+      "bytes": 2011,
+      "sha256": "88cbf71f0873e5757ab1cd2e13f0278ef639f90fb1ae5beae16411e79563bc99"
+    },
+    {
+      "path": "starter_v0/artifacts/versions/v2/tools.yaml",
+      "bytes": 7009,
+      "sha256": "258f2f862f37c632e55c1efcec2683e0168cce2950136ab69227b064b28a2b81"
+    },
+    {
+      "path": "starter_v0/artifacts/versions/v3/system_prompt.md",
+      "bytes": 2011,
+      "sha256": "88cbf71f0873e5757ab1cd2e13f0278ef639f90fb1ae5beae16411e79563bc99"
+    },
+    {
+      "path": "starter_v0/artifacts/versions/v3/tools.yaml",
+      "bytes": 7686,
+      "sha256": "2d2e0fe2c35f9da36b7560fe8c5e181f0688db14960dbf3078caa888a2d92f9a"
+    },
+    {
+      "path": "starter_v0/chat.py",
+      "bytes": 9603,
+      "sha256": "210dde7085e65bcc4fb4d918fc02a86637254abbf04c87217d537f3af6420b75"
+    },
+    {
+      "path": "starter_v0/company_policy/README.md",
+      "bytes": 444,
+      "sha256": "f441781d42f09bd566de2602099ed079a947a5f3c89fb2dfc01c06232a59efab"
+    },
+    {
+      "path": "starter_v0/company_policy/access-control-policy.md",
+      "bytes": 815,
+      "sha256": "abdbd62aa71612a5ed47e6d5da8ccdd979ef93886dd2a0586e37a45e9c6a5d06"
+    },
+    {
+      "path": "starter_v0/company_policy/data-privacy-policy.md",
+      "bytes": 718,
+      "sha256": "87586bd4bece17700535229442ac10ef50d16507d80db2e504a02f099399f9ee"
+    },
+    {
+      "path": "starter_v0/company_policy/external-tools-policy.md",
+      "bytes": 914,
+      "sha256": "d4a8c26c30c159a7401a1088f2a59f5836888fc9d8f2f035c647d3806153606e"
+    },
+    {
+      "path": "starter_v0/company_policy/incident-response-policy.md",
+      "bytes": 886,
+      "sha256": "5b0dbb8a53b0edbc11ca92d834e261ec49ba95658a01d702fb2a93c1cc2be8a5"
+    },
+    {
+      "path": "starter_v0/company_policy/service-operations-policy.md",
+      "bytes": 750,
+      "sha256": "9dc9d8d0cadf028e13326dbb1707d3899819cc6ab4bb159dabebd668b1af78bb"
+    },
+    {
+      "path": "starter_v0/company_policy/ticketing-policy.md",
+      "bytes": 742,
+      "sha256": "a9b57d5ee3a56c21a397ed7550e55f6f8627d3f76ab44cae50ab7fa0acf853e0"
+    },
+    {
+      "path": "starter_v0/data/eval_adversarial.json",
+      "bytes": 7220,
+      "sha256": "f73e372f1e72c88b631e1fa13d78197869a918d2a6b6a8b973ea43c7e8293177"
+    },
+    {
+      "path": "starter_v0/data/eval_base.json",
+      "bytes": 17277,
+      "sha256": "98f17dcc195e699cb296c5dbbd3d9e9ac707243af55a97d3b4d865fe791fe40b"
+    },
+    {
+      "path": "starter_v0/data/eval_group.json",
+      "bytes": 7392,
+      "sha256": "59adc9d0453fce308c9360ebf4f324a5e80f1b1d672e20bab5ce1bdd006b6f63"
+    },
+    {
+      "path": "starter_v0/data/eval_helpdesk_extension.json",
+      "bytes": 5874,
+      "sha256": "581997dc5c7659252a3601ea37ba79db574674d4ecf514e86756e887ce91de65"
+    },
+    {
+      "path": "starter_v0/env_loader.py",
+      "bytes": 798,
+      "sha256": "9f83cd3ff4deaf846265caac4b1f8771528468018d4f035368dd6114ede2ea71"
+    },
+    {
+      "path": "starter_v0/helpdesk_data/README.md",
+      "bytes": 653,
+      "sha256": "eec3c983795a6bdc14ba34c010a8467900732e1e0c3d304350c98f1a8c4c88c6"
+    },
+    {
+      "path": "starter_v0/helpdesk_data/assets.json",
+      "bytes": 6287,
+      "sha256": "65116c76b0254850208b526e63732901bd27548015bf8b98b53f1580cf2671af"
+    },
+    {
+      "path": "starter_v0/helpdesk_data/knowledge_base/account-access.md",
+      "bytes": 501,
+      "sha256": "5e7129eeb673d74b062b16c9a7db00ae3a9e9bf4738f61d6b44b35bb7d43ca17"
+    },
+    {
+      "path": "starter_v0/helpdesk_data/knowledge_base/approved-drivers.md",
+      "bytes": 605,
+      "sha256": "bcb57253e5f5116dad604e07cba88611a0cecd192e9f5e381d32d1a325922cb9"
+    },
+    {
+      "path": "starter_v0/helpdesk_data/knowledge_base/disk-encryption.md",
+      "bytes": 544,
+      "sha256": "c5b57d472382e454dd5e8692844685097277321ae2cb2cfb206494677a92c990"
+    },
+    {
+      "path": "starter_v0/helpdesk_data/knowledge_base/disk-health.md",
+      "bytes": 534,
+      "sha256": "28bf4af02bf5de9510c8c782d1ba58d492f79c83186b050989f42ee2bcf09f9b"
+    },
+    {
+      "path": "starter_v0/helpdesk_data/knowledge_base/meeting-room-audio.md",
+      "bytes": 511,
+      "sha256": "4726474d1ebf8bf127527e51710da03fa3ee70ea6247ed8fc2353ab1c57f8a9e"
+    },
+    {
+      "path": "starter_v0/helpdesk_data/knowledge_base/outlook-profile.md",
+      "bytes": 534,
+      "sha256": "1523bbe3d60fff5c12ddd7bf54454e0b71ab1048749e200ff38a394c82ca9b43"
+    },
+    {
+      "path": "starter_v0/helpdesk_data/knowledge_base/printer-injection-probe.md",
+      "bytes": 564,
+      "sha256": "7a1c1e5ddb0ca12fd7285f2f956593eda70032ef0682cdc2ab16da4f8f60121a"
+    },
+    {
+      "path": "starter_v0/helpdesk_data/knowledge_base/printer-spooler.md",
+      "bytes": 563,
+      "sha256": "1e2efd44d13d21d19d5720d5f318fe9243ec21a47f94d17cfa7908dc979661a6"
+    },
+    {
+      "path": "starter_v0/helpdesk_data/knowledge_base/vpn-macos.md",
+      "bytes": 681,
+      "sha256": "1b650e1b6a716ac4315d1d0f3eeec1a60f372d1ed1d0a738b3f406265d86a324"
+    },
+    {
+      "path": "starter_v0/helpdesk_data/knowledge_base/vpn-windows.md",
+      "bytes": 752,
+      "sha256": "5bb31b5054fdaf8764695d96d903b18c02e75f9799c021e6861b5e63f83d877a"
+    },
+    {
+      "path": "starter_v0/helpdesk_data/knowledge_base/wifi-windows.md",
+      "bytes": 513,
+      "sha256": "543da98664f6b83202dc1be8823b3c91ebcb80ee7b9d3acabaa89aa8756096aa"
+    },
+    {
+      "path": "starter_v0/helpdesk_data/service_status.json",
+      "bytes": 2741,
+      "sha256": "172b25f08a45c5af737f7663959c5b409b7bc8e286ff84605882cb361cdb1bd5"
+    },
+    {
+      "path": "starter_v0/helpdesk_data/users.json",
+      "bytes": 2012,
+      "sha256": "fb6ca5531541435739f0573401fc619e9dcfc8bc1e38f52a6048cc2b74d85115"
+    },
+    {
+      "path": "starter_v0/providers/__init__.py",
+      "bytes": 566,
+      "sha256": "6686c5053f0f7bbac87ebb96b3efd60d8635993c95ebd1a4bc6cb1a1fb826b25"
+    },
+    {
+      "path": "starter_v0/providers/anthropic_provider.py",
+      "bytes": 3305,
+      "sha256": "d48b35154fe2fce2542715b98103fc75eac382d038c20604781547079bc81137"
+    },
+    {
+      "path": "starter_v0/providers/base.py",
+      "bytes": 732,
+      "sha256": "94a3807c55ac3314d2557ed03b5d775d05467815295a05355bdc07ba4415e98f"
+    },
+    {
+      "path": "starter_v0/providers/gemini_provider.py",
+      "bytes": 5194,
+      "sha256": "a5617146aae7e39ed6d6c547462cfe61f1ddc29e6e6cd81c6a43313b69e98366"
+    },
+    {
+      "path": "starter_v0/providers/openai_provider.py",
+      "bytes": 1953,
+      "sha256": "0c694a9110605edba0fa4e1fac9a96c04cc5259b4f4f912fa8ae06ad8803e4c8"
+    },
+    {
+      "path": "starter_v0/providers/openrouter_provider.py",
+      "bytes": 483,
+      "sha256": "db6c4885a8ef2aa0263253e994cf2853b68714bd468aea87e7365a3b09c2ceb9"
+    },
+    {
+      "path": "starter_v0/requirements.txt",
+      "bytes": 261,
+      "sha256": "19a392f481ad31d7218d3eb5e3f2503f88f2e15a1067f48d63b8d21f07ef696b"
+    },
+    {
+      "path": "starter_v0/run_eval.py",
+      "bytes": 15049,
+      "sha256": "af4f1a4c26438f0270c315bde9037d2b48e1f5d064775ff2eaeb8bcd7744300f"
+    },
+    {
+      "path": "starter_v0/samples/README.md",
+      "bytes": 393,
+      "sha256": "d4697a56e62b5469e3c8c9c5b8f516505f2a035b3361350efb58275abe03451a"
+    },
+    {
+      "path": "starter_v0/samples/eval_group.schema.example.json",
+      "bytes": 1265,
+      "sha256": "7b016031a4e378dd834ab9116cd01b7d4a0beb0222262af52f3722d9cd4b4705"
+    },
+    {
+      "path": "starter_v0/samples/run-analysis.csv",
+      "bytes": 762,
+      "sha256": "c409d3b5247e95433760543c5cb109c800f0fec7a98048c3ae69fa6bc45233c7"
+    },
+    {
+      "path": "starter_v0/samples/transcripts/example_helpdesk.transcript.json",
+      "bytes": 1563,
+      "sha256": "a1e5adfe151ac01dab17ede79932224451ce8623235e4c001bdc15fa034da445"
+    },
+    {
+      "path": "starter_v0/samples/version_log.example.csv",
+      "bytes": 1016,
+      "sha256": "1fa1a082dbf636f9f62d828c1008e23d319a5f71d070c932794272079f553ab5"
+    },
+    {
+      "path": "starter_v0/scripts/capture_ui_transcripts.py",
+      "bytes": 3075,
+      "sha256": "9aab0e8a883a2ce4f28986bcd87edd794d347dbd2b738f2b6d834d2555a33450"
+    },
+    {
+      "path": "starter_v0/scripts/check_ui.py",
+      "bytes": 4396,
+      "sha256": "675f1c89fd968deb7261e94065581d98366ec5ef8c7caf241eef8845f46e404a"
+    },
+    {
+      "path": "starter_v0/scripts/parse_runs.py",
+      "bytes": 3111,
+      "sha256": "91c2ad7dce39b02a69ed580864894e2ec58469223004a1855aff21df8d049da6"
+    },
+    {
+      "path": "starter_v0/scripts/preflight_provider.py",
+      "bytes": 1668,
+      "sha256": "8bc9feb8465868ceb10d9c8f48524e12de6939ea685a8932056b8d78c8776b73"
+    },
+    {
+      "path": "starter_v0/scripts/prepare_submission.py",
+      "bytes": 6995,
+      "sha256": "b95986a392870af8d7d8fa7a48e052e70204e461cf25d847cb82178882a1f01b"
+    },
+    {
+      "path": "starter_v0/scripts/review_retrieval_loop.py",
+      "bytes": 3530,
+      "sha256": "d5e6d34cb4d0f4a41d168d380b1cc95697e966961d545ababc734103dcfe66e8"
+    },
+    {
+      "path": "starter_v0/scripts/run_audited_eval.py",
+      "bytes": 3890,
+      "sha256": "748b250b8c8a83a0e9a65b7a4406b95dffdfbe6839892d090eed9925b0d89e0b"
+    },
+    {
+      "path": "starter_v0/scripts/security_boundary_probes.py",
+      "bytes": 6519,
+      "sha256": "0dcefd96df6eb7eb8e5759f57ed53a7e0144b21bd7d535b33466016cf2043ac5"
+    },
+    {
+      "path": "starter_v0/scripts/summarize_core_evidence.py",
+      "bytes": 5452,
+      "sha256": "c1939c623a65c9434fb8b13572ce6bb92de894f4759fbf2527564c5048f5eca9"
+    },
+    {
+      "path": "starter_v0/scripts/validate_step34_evidence.py",
+      "bytes": 3865,
+      "sha256": "5c9a0375b30edddcaac4433af00cbf727d3e1906396a6170fb1183f5b32415e6"
+    },
+    {
+      "path": "starter_v0/start_ui.bat",
+      "bytes": 160,
+      "sha256": "26e524fc34e364695836a4928a42fcbd687868eb089185aa7f6cd9716b5683a3"
+    },
+    {
+      "path": "starter_v0/tools/README.md",
+      "bytes": 899,
+      "sha256": "f90b996d0b6781f20512530b51ab605483e71bec521e95cc61fd4a05cd06d1bd"
+    },
+    {
+      "path": "starter_v0/tools/__init__.py",
+      "bytes": 1872,
+      "sha256": "6d325e75736e67bb8a584d9c52c5dbe8471c460d2af860bee9f9d5b7e1796320"
+    },
+    {
+      "path": "starter_v0/tools/_shared.py",
+      "bytes": 1152,
+      "sha256": "c154237683fe8a432e7960feec716e763d3d11d50d350f7e7731223e51e9bdef"
+    },
+    {
+      "path": "starter_v0/tools/check_service_status/TOOL.md",
+      "bytes": 380,
+      "sha256": "6c8fb11c3b2707ca14ec9cf5fa56fdb772db224917ff7ce911a780e3b402ea27"
+    },
+    {
+      "path": "starter_v0/tools/check_service_status/__init__.py",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "starter_v0/tools/check_service_status/tool.py",
+      "bytes": 1078,
+      "sha256": "7d9c5170737dfd8d022d0dea555e051b97fbbbf09e8f8e6c188aafd0da8fd0b4"
+    },
+    {
+      "path": "starter_v0/tools/clarify/TOOL.md",
+      "bytes": 344,
+      "sha256": "789e022a110b55093580ccaafb80da6e6c0e8413927f100c843aefa3c54184e0"
+    },
+    {
+      "path": "starter_v0/tools/clarify/tool.py",
+      "bytes": 370,
+      "sha256": "6950e018c467faa8252977df45801a3779937ac443f3aa65923ca8ecd70bd7bf"
+    },
+    {
+      "path": "starter_v0/tools/create_ticket/TOOL.md",
+      "bytes": 534,
+      "sha256": "b2da8da06ed8a1e6686f7ac2c40e55248203e1d8ba8869d84805f5829dc8aee9"
+    },
+    {
+      "path": "starter_v0/tools/create_ticket/__init__.py",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "starter_v0/tools/create_ticket/tool.py",
+      "bytes": 3136,
+      "sha256": "a12b39c52ca72a9fc6f024f674755624392c4a8bb7faeb6e0530a574669ed87c"
+    },
+    {
+      "path": "starter_v0/tools/format_incident_report/TOOL.md",
+      "bytes": 365,
+      "sha256": "c286b1cef8db49fc56dc2fbef47ad0bf455cb61bdec21bc67aba0af74ff88724"
+    },
+    {
+      "path": "starter_v0/tools/format_incident_report/__init__.py",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "starter_v0/tools/format_incident_report/tool.py",
+      "bytes": 1178,
+      "sha256": "1f130b70d8d8acbf43cc3f2e4460d4f124269abf7de2e606a1e416c4e85dd0ea"
+    },
+    {
+      "path": "starter_v0/tools/inspect_device/TOOL.md",
+      "bytes": 396,
+      "sha256": "cc7cfdb415a3bd2fc306e86791cbeb94559dc4e8eeebaf4bef88b314e130fa85"
+    },
+    {
+      "path": "starter_v0/tools/inspect_device/__init__.py",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "starter_v0/tools/inspect_device/tool.py",
+      "bytes": 1229,
+      "sha256": "39d52fcb0c8c737316629083c1a884029dcc071fe782083ece9c214ee510d708"
+    },
+    {
+      "path": "starter_v0/tools/lookup_user/TOOL.md",
+      "bytes": 370,
+      "sha256": "011cf2ffead45c4066c336e33486493629576df9fb001dee3d7b70af6f80b864"
+    },
+    {
+      "path": "starter_v0/tools/lookup_user/__init__.py",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "starter_v0/tools/lookup_user/tool.py",
+      "bytes": 765,
+      "sha256": "0e34d1689d3596e4a2951558561a6a5c87c0257ee17f7167859fa3e230e2b0a3"
+    },
+    {
+      "path": "starter_v0/tools/policy/TOOL.md",
+      "bytes": 391,
+      "sha256": "3755d1e6c411ccef36616ba7eadc503f5ab626999b1ab064e24f6a2e89c24abd"
+    },
+    {
+      "path": "starter_v0/tools/policy/tool.py",
+      "bytes": 4530,
+      "sha256": "e4da7b6aa5b001681758a73a560e989d2aab8a2a3507c3d7d87985c77f719e9d"
+    },
+    {
+      "path": "starter_v0/tools/search_device_info/TOOL.md",
+      "bytes": 759,
+      "sha256": "b89b2f96634becca4e4514e7519da96d6d2ac38e3e6e2775b595b9845218df12"
+    },
+    {
+      "path": "starter_v0/tools/search_device_info/__init__.py",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "starter_v0/tools/search_device_info/tool.py",
+      "bytes": 5511,
+      "sha256": "00fa86d616cf605384edd1c7580a816c49c2b0cee429fa7e4390f2b38654a596"
+    },
+    {
+      "path": "starter_v0/tools/search_kb/TOOL.md",
+      "bytes": 474,
+      "sha256": "40034db44003cd30e3248220f8bf21b2356fbf0948c2fae605534d52708410db"
+    },
+    {
+      "path": "starter_v0/tools/search_kb/__init__.py",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "starter_v0/tools/search_kb/tool.py",
+      "bytes": 3201,
+      "sha256": "44bdc4deefb83562affb2bad9e2197fd12b5a5732b7fed1066a0b36535becf07"
+    },
+    {
+      "path": "starter_v0/ui_session.py",
+      "bytes": 3810,
+      "sha256": "e3a8b043a0eff64970f234a4dca7e5efc8bfe794f0f6c6d3d0e53bd3282cd4ef"
+    },
+    {
+      "path": "starter_v0/versioning.py",
+      "bytes": 1011,
+      "sha256": "6db2c3daed8955b1d9f5f29d7f6393533fed662af9869803cccb6593a665c163"
+    }
+  ]
+}
