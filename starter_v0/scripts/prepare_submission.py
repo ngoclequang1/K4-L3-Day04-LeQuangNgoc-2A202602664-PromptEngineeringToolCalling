@@ -95,7 +95,7 @@ def main():
         'synthetic_attack_data': 'Preserved the fixed lab password-like attack and clearly synthetic offline probes; these are not live credentials.',
         'real_data_scope': 'Fictional lab fixture data retained; student roster is required submission identity metadata.',
         'excluded': ['.git', '.env and local keys', '.venv', 'caches', 'generated ticket files', 'scratch runs/transcripts', 'previous archives'],
-        'remaining': ['learner-authored self-reflection', 'final personal commit and push', 'GitHub final-tree review', 'VLearn submission'],
+        'remaining': ['final personal commit and push', 'GitHub final-tree review', 'VLearn submission'],
         'manifest_excludes_itself': True,
         'files': [{'path': name, 'bytes': len(data), 'sha256': sha(data)} for name, data in contents.items()],
     }
@@ -114,7 +114,7 @@ def main():
     print(f'Validated {len(contents)} files, four base-run hashes, four transcripts, and {checked_links} links.')
     print('No configured credentials or common real-secret patterns found. Known synthetic attack fixtures retained.')
     print(f'Archive: {out.relative_to(ROOT)}')
-    print('Personal reflection, final commit/push and VLearn submission remain pending.')
+    print('Final commit/push and VLearn submission remain pending; solo reflection is complete with AI assistance disclosed.')
 
 
 if __name__ == '__main__':

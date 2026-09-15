@@ -1,6 +1,6 @@
 # Day 04 Lab Checklist — IT Helpdesk Agent
 
-Based on `README.md` (official requirements) and `LAB-GUIDE.md` (recommended workflow). Steps 2–3, the Step 4 review, Step 5, and technical report/submission preparation have saved evidence. Personal reflection and final submission actions are pending. Failed safety guarantees remain unchecked. Paths below are relative to `starter_v0/` unless stated otherwise.
+Based on `README.md` (official requirements) and `LAB-GUIDE.md` (recommended workflow). Steps 2–3, the Step 4 review, Step 5, and report/submission preparation including the solo reflection have saved evidence. Final commit/push and submission actions are pending. Failed safety guarantees remain unchecked. Paths below are relative to `starter_v0/` unless stated otherwise.
 
 ## 1. Understand and prepare — recommended
 
@@ -67,7 +67,7 @@ Simple Streamlit UI: [usage guide](starter_v0/UI-GUIDE.md). Four live demo trans
 
 ## 6. Report and submission — core
 
-- [x] Complete the technical content of `artifacts/REPORT.md`: agent description, version evidence, failures, safety review, and evidence-based technical reflection. Learner-authored personal reflection in C2 remains pending.
+- [x] Complete `artifacts/REPORT.md`: agent description, version evidence, failures, safety review, technical reflection and solo reflection in C2, with Codex assistance disclosed.
 - [x] Link concrete run/transcript files to support report claims.
 - [x] Verify recorded artifact hashes correspond to the artifacts used in each experiment.
 - [x] Confirm all required artifacts, version logs, base runs, team cases, adversarial evidence, transcripts, and UI are included in the local review archive.
@@ -76,7 +76,7 @@ Simple Streamlit UI: [usage guide](starter_v0/UI-GUIDE.md). Four live demo trans
 - [x] Prepare and execute four demo scenarios with linked traces and a baseline/change/limitation explanation; learner presentation rehearsal is not claimed.
 - [x] Prepare saved runs/transcripts as a fallback for provider or network failures.
 
-Prepared: [technical report](starter_v0/artifacts/REPORT.md), [roster](TEAMMATES.md), [submission handoff](SUBMISSION-READY.md), and [validation/file manifest](starter_v0/artifacts/evidence/submission_audit.json). The local review ZIP is in `submission/` and is intentionally ignored by Git. Remaining: write your own C2 reflection, personally commit/push final work, verify the final GitHub tree, and submit the shared URL on VLearn. This checklist does not claim those actions have happened.
+Prepared: [report and solo reflection](starter_v0/artifacts/REPORT.md), [roster](TEAMMATES.md), [submission handoff](SUBMISSION-READY.md), and [validation/file manifest](starter_v0/artifacts/evidence/submission_audit.json). The local review ZIP is in `submission/` and is intentionally ignored by Git. Remaining: personally commit/push final work, verify the final GitHub tree, and submit the shared URL on VLearn. This checklist does not claim those actions have happened.
 
 ## 7. New tool — optional bonus
 

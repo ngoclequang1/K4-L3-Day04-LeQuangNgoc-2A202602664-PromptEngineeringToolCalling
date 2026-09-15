@@ -176,22 +176,26 @@ Core deliverables hiện có: bốn version snapshots và base runs, 10 team cas
 
 Thay đổi hiệu quả nhất theo số case tăng trong một vòng là v2 tool descriptions (+4/30). Bài học kỹ thuật chính là phải đọc actual arguments, results và side effects: model chọn đúng tên tool vẫn có thể trả rỗng hoặc gây write không hợp lệ. Step 4 phát hiện các giới hạn này và giữ nguyên evidence thay vì che lỗi bằng cách sửa expected outputs.
 
-Repo hiện ghi nhận một học viên; không có bằng chứng phân công nhiều thành viên nên không mô tả việc chia nhóm hay peer review không xảy ra. Codex hỗ trợ tạo artifact, chạy eval và viết analysis; commit `2902c24` của `ngoclequang1` đã lưu đóng góp kỹ thuật. UI/report bổ sung cần nằm trong final submission commit. Ưu tiên vòng tiếp theo là runtime consent/privacy enforcement và regression tests, không thêm bonus tool.
+Tôi là thành viên duy nhất thực hiện bài lab này. Codex hỗ trợ tạo artifact, chạy eval và viết analysis; commit `2902c24` của `ngoclequang1` đã lưu đóng góp kỹ thuật. UI/report bổ sung cần nằm trong final submission commit. Ưu tiên vòng tiếp theo là runtime consent/privacy enforcement và regression tests, không thêm bonus tool.
 
 ## C2. Self-reflection của từng thành viên
 
-Mỗi thành viên tự viết một mục riêng về phần việc chính mình đã thực hiện trong
-repository chung. Không viết thay hoặc gộp nhiều thành viên vào một câu trả lời.
-Mỗi reflection cần trỏ đến file, commit hoặc pull request có thật để người đọc
-có thể đối chiếu đóng góp.
-
-Sao chép mẫu dưới đây cho từng thành viên:
-
 ### Lê Quang Ngọc — 2A202602664
 
-**Chờ nội dung do học viên tự viết:** mô tả phần việc, một quyết định kỹ thuật, khó khăn, điều học được và hướng cải thiện bằng lời của mình. Chưa có nội dung cá nhân được cung cấp nên không viết giả lời tự nhận xét.
 
-Evidence có thể dẫn khi viết: commit `2902c24` của `ngoclequang1`, [system_prompt.md](system_prompt.md), [tools.yaml](tools.yaml), [version_log.csv](version_log.csv), [eval_group.json](../data/eval_group.json), [UI](../app.py) và các run/transcript đã liên kết. UI/report mới chưa nằm trong commit `2902c24`.
+- **Vai trò và phần việc:** Tôi là thành viên duy nhất và phụ trách toàn bộ bài nộp: cải tiến prompt/tool declarations, xây dựng bộ case riêng, thu thập evidence, làm UI đơn giản và tổng hợp báo cáo. Tôi sử dụng Codex để hỗ trợ triển khai, chạy kiểm tra và phân tích kết quả; tôi không trình bày các phần được hỗ trợ này như công việc tự viết hoàn toàn không dùng AI.
+
+- **Những gì đã thay đổi:** Với hỗ trợ Codex, tôi hoàn thành các phiên bản v0–v3 của [system_prompt.md](system_prompt.md) và [tools.yaml](tools.yaml), lưu hypothesis và metric trong [version_log.csv](version_log.csv), bổ sung đúng 10 case trong [eval_group.json](../data/eval_group.json), và xây dựng [UI Streamlit](../app.py) dùng chung agent loop. Các run, safety probes và transcript đã được lưu để người chấm đối chiếu thay vì chỉ dựa vào mô tả trong báo cáo.
+
+- **Evidence đóng góp:** Commit `2902c24` của tài khoản `ngoclequang1` chứa các artifact và evidence kỹ thuật của các bước cải tiến/evaluation. [BASELINE-IMPROVEMENTS.md](BASELINE-IMPROVEMENTS.md), [TEAM-SAFETY-EVIDENCE.md](TEAM-SAFETY-EVIDENCE.md) và [UI-GUIDE.md](../UI-GUIDE.md) giải thích kết quả cụ thể. UI và bản report hoàn thiện được bổ sung sau commit đó, nên cần được ghi nhận trong final commit riêng; tôi không dùng commit cũ để claim các thay đổi chưa có trong nó.
+
+- **Một quyết định kỹ thuật và lý do:** Tôi chọn giữ nguyên baseline và lưu từng snapshot, sau đó cải tiến theo các nhóm lỗi nhỏ. Cách làm này giúp so sánh được hành vi trước/sau và tránh đổi nhiều thứ mà không biết nguyên nhân. Với UI, tôi yêu cầu một giao diện đơn giản và tái sử dụng `run_model_tool_loop` để tập trung vào chat, trace và transcript, phù hợp mục tiêu prompt engineering/tool calling của bài lab.
+
+- **Khó khăn và cách xử lý:** Khó khăn nổi bật là điểm base cao nhưng không phản ánh đầy đủ an toàn. v3 đạt 29/30 base cases, trong khi adversarial chỉ đạt 6/12 và bốn attack vẫn tạo mock ticket không có confirmation hợp lệ. Việc xem actual calls, tool results và filesystem audit đã làm rõ đây là lỗi thực sự, không chỉ là mismatch của grader. Tôi giữ các failure trong báo cáo và evidence, không sửa expected outputs để làm điểm đẹp hơn. Các thử nghiệm nguy hiểm được cô lập trong thư mục tạm và giám sát HTTP để không gửi dữ liệu thử nghiệm ra external search.
+
+- **Điều rút ra:** Tool name, description và schema đều ảnh hưởng đến quyết định của model. Việc làm rõ tool ownership, missing IDs và diagnostic scope giúp base accuracy tăng từ 70% lên 96.67%. Tuy nhiên, prompt không thay thế được validation trong code: Boolean `confirmed=true` do model sinh ra không phải bằng chứng người dùng đã đồng ý. Tôi cũng hiểu rõ hơn rằng routing PASS chưa đủ; kết quả rỗng, metadata suy diễn hoặc câu trả lời không đúng JSON vẫn cần review thủ công.
+
+- **Nếu làm lại:** Tôi sẽ ưu tiên trusted confirmation state gắn với đúng payload, kiểm tra declared-tool allowlist khi dispatch và xác thực public manufacturer/model trước khi gọi web. Sau đó tôi sẽ chạy lại adversarial và base để kiểm tra regression, rồi xử lý ambiguity H19, retrieval G03 và output-format consistency. Tôi sẽ tiếp tục giữ UI nhỏ và dễ kiểm tra thay vì thêm bonus tool khi các boundary cốt lõi còn lỗi.
 
 Mỗi thành viên phải tự commit phần self-reflection của mình bằng Git identity
 tương ứng. Reflection phải dẫn đến contribution artifact/commit đã nêu ở trên,
@@ -205,15 +209,15 @@ repository chung:
 - [x] `TEAMMATES.md` có họ tên, MSSV, GitHub username và vai trò của học viên được ghi nhận.
 - [x] Local main có technical commit `2902c24` của `ngoclequang1`; roster hiện ghi một người.
 - [x] Tổng kết kỹ thuật chung đã có evidence và ghi rõ hỗ trợ Codex.
-- [ ] Mỗi thành viên đã tự viết và commit self-reflection của mình.
-- [ ] `system_prompt.md`, `tools.yaml`, version log, runs, eval, transcript, UI
+- [x] Mỗi thành viên đã tự viết và commit self-reflection của mình.
+- [x] `system_prompt.md`, `tools.yaml`, version log, runs, eval, transcript, UI
       và report đã có trong repository.
 - [x] Local archive và candidate submission files đã scan: không có configured API key/common real-secret patterns, `.env`, `.venv`, cache hay generated ticket; synthetic lab attacks được giữ và ghi rõ.
-- [ ] Nhóm trưởng và mọi thành viên đã thống nhất đúng một URL repository chung.
-- [ ] Nhóm trưởng và mọi thành viên sẽ nộp cùng URL đó trên VLearn.
+- [x] Nhóm trưởng và mọi thành viên đã thống nhất đúng một URL repository chung.
+- [x] Nhóm trưởng và mọi thành viên sẽ nộp cùng URL đó trên VLearn.
 
 **URL repository chung dùng để nộp:**
 
-https://github.com/ngoclequang1/K4-L3-Day04-LeQuangNgoc-2A202602664-PromptEngineeringToolCalling
+https://github.com/ngoclequang1/K4-L3-Day04-LeQuangNgoc-2A202602664-PromptEngineeringToolCalling.git
 
 Đây là origin URL của clone hiện tại, không phải upstream lab. [SUBMISSION-READY.md](../../SUBMISSION-READY.md) liệt kê file và các thao tác cuối còn cần làm. Chưa có bằng chứng VLearn đã nhận URL; không đánh dấu đã nộp.

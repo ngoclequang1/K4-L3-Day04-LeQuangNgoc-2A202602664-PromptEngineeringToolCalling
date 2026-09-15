@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T13:31:14.574713+00:00",
+  "generated_at": "2026-09-15T13:37:59.397458+00:00",
   "scope": "working-tree review archive, not a published repository or VLearn submission",
   "technical_checks": "passed",
   "base_runs": [
@@ -29,7 +29,7 @@
     }
   ],
   "ui_transcripts": 4,
-  "relative_links_checked": 67,
+  "relative_links_checked": 70,
   "credential_scan": "configured key exact matches and common token/private-key patterns: no matches",
   "synthetic_attack_data": "Preserved the fixed lab password-like attack and clearly synthetic offline probes; these are not live credentials.",
   "real_data_scope": "Fictional lab fixture data retained; student roster is required submission identity metadata.",
@@ -43,7 +43,6 @@
     "previous archives"
   ],
   "remaining": [
-    "learner-authored self-reflection",
     "final personal commit and push",
     "GitHub final-tree review",
     "VLearn submission"
@@ -62,8 +61,8 @@
     },
     {
       "path": "CHECKLIST.md",
-      "bytes": 9099,
-      "sha256": "abe401fe6e72daebbd034eb13efd5d8040848bbd5987f8fa310cd76899c15a91"
+      "bytes": 9046,
+      "sha256": "ad824ea4a0838277d78e6159dc121cfc34a9258f40ed1af64bb4967f49c415c9"
     },
     {
       "path": "LAB-GUIDE.md",
@@ -82,13 +81,13 @@
     },
     {
       "path": "SUBMISSION-READY.md",
-      "bytes": 4190,
-      "sha256": "5473db9dc70958d77ce5ff26baf6bdcb190fd92abc405685bbdb3edaa143e966"
+      "bytes": 4043,
+      "sha256": "79bca3c383d1fecaae6d831e736bf6919372e30f7610ad0ab5ebeed76d89d96b"
     },
     {
       "path": "TEAMMATES.md",
-      "bytes": 973,
-      "sha256": "06ec5457575327a899d87c02ac8851a00d20a3db4c0aeb91775bde306c2fc079"
+      "bytes": 896,
+      "sha256": "e0f20f191a0deb0908d14133bb06cc5cd2389908002fdaed8cec109e77c9a1ae"
     },
     {
       "path": "TOOL-SETUP.md",
@@ -132,8 +131,8 @@
     },
     {
       "path": "starter_v0/artifacts/REPORT.md",
-      "bytes": 20706,
-      "sha256": "fbbe7f7cd59d9b87e4a339608687e064681a19d80c5a13d539e566502a4b6fd7"
+      "bytes": 23464,
+      "sha256": "dcb988186aa28671d2d98dfb6814fce1c70775a5a018eb7f4bac9347f34ad755"
     },
     {
       "path": "starter_v0/artifacts/TEAM-SAFETY-EVIDENCE.md",
@@ -507,8 +506,8 @@
     },
     {
       "path": "starter_v0/scripts/prepare_submission.py",
-      "bytes": 6995,
-      "sha256": "b95986a392870af8d7d8fa7a48e052e70204e461cf25d847cb82178882a1f01b"
+      "bytes": 6996,
+      "sha256": "2c31d3ff8b550a2e2f7807335f13688fcbc9e5da79cab2db7a2d1f520a2d5b8b"
     },
     {
       "path": "starter_v0/scripts/review_retrieval_loop.py",
