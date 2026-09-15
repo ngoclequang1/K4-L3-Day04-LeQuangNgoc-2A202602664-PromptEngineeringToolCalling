@@ -1,0 +1,58 @@
+{
+  "validation": "passed; known safety failures remain recorded",
+  "suites": {
+    "group": {
+      "total_cases": 10,
+      "measured_cases": 10,
+      "provider_error_cases": 0,
+      "passed_cases": 9,
+      "case_accuracy": 0.9,
+      "tool_routing_accuracy": 1.0,
+      "argument_accuracy": 0.9,
+      "multiturn_accuracy": 1.0,
+      "failure_counts": {
+        "wrong_tool": 1
+      },
+      "observed_mismatch_counts": {
+        "wrong_arg_value": 1
+      }
+    },
+    "adversarial": {
+      "total_cases": 12,
+      "measured_cases": 12,
+      "provider_error_cases": 0,
+      "passed_cases": 6,
+      "case_accuracy": 0.5,
+      "tool_routing_accuracy": 0.5,
+      "argument_accuracy": 0.5,
+      "multiturn_accuracy": 0.0,
+      "failure_counts": {
+        "wrong_boundary": 6
+      },
+      "observed_mismatch_counts": {
+        "missing_tool_call": 6
+      }
+    }
+  },
+  "offline_expectations_met": "16/22",
+  "followup_scenarios_answered": 3,
+  "sha256": {
+    "agent.py": "12797818bb9879cfe51d0fb8d2f0aa3f276d092b18c887059088e90ac7f9159f",
+    "chat.py": "210dde7085e65bcc4fb4d918fc02a86637254abbf04c87217d537f3af6420b75",
+    "run_eval.py": "af4f1a4c26438f0270c315bde9037d2b48e1f5d064775ff2eaeb8bcd7744300f",
+    "tools/check_service_status/tool.py": "7d9c5170737dfd8d022d0dea555e051b97fbbbf09e8f8e6c188aafd0da8fd0b4",
+    "tools/clarify/tool.py": "6950e018c467faa8252977df45801a3779937ac443f3aa65923ca8ecd70bd7bf",
+    "tools/create_ticket/tool.py": "a12b39c52ca72a9fc6f024f674755624392c4a8bb7faeb6e0530a574669ed87c",
+    "tools/format_incident_report/tool.py": "1f130b70d8d8acbf43cc3f2e4460d4f124269abf7de2e606a1e416c4e85dd0ea",
+    "tools/inspect_device/tool.py": "39d52fcb0c8c737316629083c1a884029dcc071fe782083ece9c214ee510d708",
+    "tools/lookup_user/tool.py": "0e34d1689d3596e4a2951558561a6a5c87c0257ee17f7167859fa3e230e2b0a3",
+    "tools/policy/tool.py": "e4da7b6aa5b001681758a73a560e989d2aab8a2a3507c3d7d87985c77f719e9d",
+    "tools/search_device_info/tool.py": "00fa86d616cf605384edd1c7580a816c49c2b0cee429fa7e4390f2b38654a596",
+    "tools/search_kb/tool.py": "44bdc4deefb83562affb2bad9e2197fd12b5a5732b7fed1066a0b36535becf07",
+    "scripts/run_audited_eval.py": "748b250b8c8a83a0e9a65b7a4406b95dffdfbe6839892d090eed9925b0d89e0b",
+    "scripts/security_boundary_probes.py": "0dcefd96df6eb7eb8e5759f57ed53a7e0144b21bd7d535b33466016cf2043ac5",
+    "scripts/review_retrieval_loop.py": "d5e6d34cb4d0f4a41d168d380b1cc95697e966961d545ababc734103dcfe66e8",
+    "data/eval_group.json": "59adc9d0453fce308c9360ebf4f324a5e80f1b1d672e20bab5ce1bdd006b6f63",
+    "data/eval_adversarial.json": "f73e372f1e72c88b631e1fa13d78197869a918d2a6b6a8b973ea43c7e8293177"
+  }
+}

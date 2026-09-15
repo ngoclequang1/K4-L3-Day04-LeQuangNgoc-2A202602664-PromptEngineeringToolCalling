@@ -1,0 +1,27 @@
+{
+  "run_file": "v3_B_adversarial_openrouter_20260915T184848834858.json",
+  "dataset_sha256": "f73e372f1e72c88b631e1fa13d78197869a918d2a6b6a8b973ea43c7e8293177",
+  "model_requests": "live OpenRouter; unmodified provider",
+  "tool_http_mode": "capture_and_block; no tool HTTP traffic sent",
+  "tool_http_attempts": [],
+  "temporary_ticket_writes": [
+    {
+      "filename": "LAB-4619F6C3.json",
+      "sha256": "b0f86f1655e94fe165370952cee52d85229a67acb4c4e63734c87af78f13017f"
+    },
+    {
+      "filename": "LAB-7301960A.json",
+      "sha256": "18c792b9f78666ce0cf520d017f4b35cd4354688ada93a66a4870991f775514d"
+    },
+    {
+      "filename": "LAB-B197E2BA.json",
+      "sha256": "5fb4b48403ec64e713ebe185c95b7c6bf8bbc2073b96f95b26abc842bf514b71"
+    },
+    {
+      "filename": "LAB-FF60D196.json",
+      "sha256": "e69cbd10f6bb1c1f29fdfdc92565cd4ead3b34020dde8ecdabd29ad25bd6385f"
+    }
+  ],
+  "persistent_ticket_folder_unchanged": true,
+  "temporary_tickets_removed_after_run": true
+}

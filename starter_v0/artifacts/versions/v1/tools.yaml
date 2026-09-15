@@ -8,7 +8,7 @@
 tools:
   # ---------------- Core tools ----------------
   - name: clarify
-    description: "Pause for missing information or explicit action confirmation. Use text for a missing asset/employee ID; never guess an ID from a device type, person name, or department. Use choice with the supported enum values when a supplied environment is ambiguous. Use yes_no to present and confirm a ticket payload; derive its summary from the stated symptom rather than asking for information already supplied. Wait for the answer before dependent tools."
+    description: "Gửi một câu hỏi cho người dùng."
     parameters:
       type: object
       properties:
@@ -28,29 +28,29 @@ tools:
       required: [query]
 
   - name: check_service_status
-    description: "Read shared-service status for one service/environment. This does not diagnose an individual device. Use production when no environment is supplied; preserve explicit staging. If the user supplies an unclear environment label, clarify with response_type=choice and options=[production, staging] instead of mapping it by guesswork. For multiple requested environments, call once per environment."
+    description: "Kiểm tra trạng thái một dịch vụ."
     parameters:
       type: object
       properties:
         service: {type: string, enum: [vpn, email, sso, wifi, printing], description: "Tên dịch vụ"}
-        environment: {type: string, enum: [production, staging], description: "Use the explicitly named supported environment, or carry it from context. Only an omitted environment defaults to production. An unsupported or informal environment label is ambiguous, not a synonym for staging: do not call this tool until clarify(choice, options=[production, staging]) resolves it."}
-      required: [service, environment]
+        environment: {type: string, enum: [production, staging], default: "production", description: "Môi trường"}
+      required: [service]
 
   - name: inspect_device
-    description: "Read the inventory and diagnostic snapshot of one known asset. Requires an actual asset ID supplied by the user or a trusted tool result; never use an employee ID, department, or generic device name. If the asset ID is missing, call clarify with response_type=text first. Only inspect when device diagnostics or inventory are requested, not merely to list an employee's assigned assets."
+    description: "Kiểm tra thông tin và chẩn đoán thiết bị."
     parameters:
       type: object
       properties:
-        asset_id: {type: string, description: "Actual company asset identifier from user context or trusted inventory; never infer or substitute an employee identifier."}
-        check: {type: string, enum: [all, network, vpn, security, hardware, software], description: "Explicit diagnostic scope: use vpn for VPN symptoms including VPN certificates, network for Wi-Fi/connectivity, security for endpoint protection/encryption, hardware for physical components, software for installed apps. Apply the symptom context even when the request simply says inspect the device alongside other tools. Use all only for an overall check or when no focused symptom/check is given. Honor the latest explicit scope."}
-      required: [asset_id, check]
+        asset_id: {type: string, description: "Mã tài sản"}
+        check: {type: string, enum: [all, network, vpn, security, hardware, software], default: "all", description: "Nhóm kiểm tra"}
+      required: [asset_id]
 
   - name: lookup_user
-    description: "Read an employee account and assigned asset IDs by employee ID. This tool alone answers which devices are assigned; add inspect_device only for a separate diagnostic request with a known asset ID. If employee ID is absent, call clarify with response_type=text; a name or department is not an employee ID."
+    description: "Tra cứu người dùng trong danh bạ hỗ trợ."
     parameters:
       type: object
       properties:
-        employee_id: {type: string, description: "Actual employee identifier supplied in context, not a name, team, department, or asset ID."}
+        employee_id: {type: string, description: "Mã nhân viên"}
       required: [employee_id]
 
   - name: format_incident_report
@@ -96,7 +96,7 @@ tools:
       required: [query]
 
   - name: create_ticket
-    description: "Write a local ticket only after explicit user approval of its exact summary, priority, and asset. An initial creation request is not approval. First present those fields using clarify with response_type=yes_no and wait; never call this tool alongside the question. Derive a concise summary from the user's stated issue. Payload changes invalidate earlier approval."
+    description: "Tạo một ticket hỗ trợ."
     parameters:
       type: object
       properties:

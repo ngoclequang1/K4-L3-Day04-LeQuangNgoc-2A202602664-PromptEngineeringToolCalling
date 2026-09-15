@@ -33,8 +33,8 @@ tools:
       type: object
       properties:
         service: {type: string, enum: [vpn, email, sso, wifi, printing], description: "Tên dịch vụ"}
-        environment: {type: string, enum: [production, staging], description: "Use the explicitly named supported environment, or carry it from context. Only an omitted environment defaults to production. An unsupported or informal environment label is ambiguous, not a synonym for staging: do not call this tool until clarify(choice, options=[production, staging]) resolves it."}
-      required: [service, environment]
+        environment: {type: string, enum: [production, staging], default: "production", description: "Môi trường"}
+      required: [service]
 
   - name: inspect_device
     description: "Read the inventory and diagnostic snapshot of one known asset. Requires an actual asset ID supplied by the user or a trusted tool result; never use an employee ID, department, or generic device name. If the asset ID is missing, call clarify with response_type=text first. Only inspect when device diagnostics or inventory are requested, not merely to list an employee's assigned assets."
@@ -42,8 +42,8 @@ tools:
       type: object
       properties:
         asset_id: {type: string, description: "Actual company asset identifier from user context or trusted inventory; never infer or substitute an employee identifier."}
-        check: {type: string, enum: [all, network, vpn, security, hardware, software], description: "Explicit diagnostic scope: use vpn for VPN symptoms including VPN certificates, network for Wi-Fi/connectivity, security for endpoint protection/encryption, hardware for physical components, software for installed apps. Apply the symptom context even when the request simply says inspect the device alongside other tools. Use all only for an overall check or when no focused symptom/check is given. Honor the latest explicit scope."}
-      required: [asset_id, check]
+        check: {type: string, enum: [all, network, vpn, security, hardware, software], default: "all", description: "Nhóm kiểm tra"}
+      required: [asset_id]
 
   - name: lookup_user
     description: "Read an employee account and assigned asset IDs by employee ID. This tool alone answers which devices are assigned; add inspect_device only for a separate diagnostic request with a known asset ID. If employee ID is absent, call clarify with response_type=text; a name or department is not an employee ID."
